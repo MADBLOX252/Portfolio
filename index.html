@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MADBLOX252 | Portfolio</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #0e0e0e;
+        color: white;
+        text-align: center;
+      }
+
+      nav {
+        background: #181818;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav a {
+        color: #00bfff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h1 {
+        color: #00bfff;
+        font-size: 2.4rem;
+      }
+
+      footer {
+        background: #111;
+        padding: 30px;
+        color: #aaa;
+        margin-top: 40px;
+      }
+
+      .fade {
+        animation: fadeIn 0.7s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- React + ReactDOM + Router from CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-router-dom@6.14.1/umd/react-router-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const { HashRouter, Routes, Route, Link } = ReactRouterDOM;
+
+      function Home() {
+        return (
+          <section className="fade">
+            <h1>MADBLOX252</h1>
+            <p>Experienced Roblox Scripter and Developer</p>
+            <p>
+              Welcome to my portfolio! Here you can explore my work, past
+              projects, and learn more about my scripting experience.
+            </p>
+          </section>
+        );
+      }
+
+      function Tos() {
+        return (
+          <section className="fade">
+            <h1>Terms of Service</h1>
+            <p>
+              <strong>1. General Conduct</strong>
+              <br />– Please do not rush or spam messages.
+              <br />– If you want to know progress, kindly DM.
+            </p>
+            <p>
+              <strong>2. Payment</strong>
+              <br />– Payment is made in Robux, BTC, or agreed methods.
+              <br />– Upfront is required for large commissions.
+              <br />– No refunds after final delivery.
+            </p>
+            <p>
+              <strong>⚠️ Reminder:</strong> By commissioning me, you agree to
+              these Terms.
+            </p>
+          </section>
+        );
+      }
+
+      function App() {
+        return (
+          <HashRouter>
+            <nav>
+              <Link to="/">Home</Link>
+              <Link to="/tos">Terms</Link>
+            </nav>
+
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/tos" element={<Tos />} />
+            </Routes>
+
+            <footer>
+              © {new Date().getFullYear()} MADBLOX252 — All Rights Reserved.
+            </footer>
+          </HashRouter>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
