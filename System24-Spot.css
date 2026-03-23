@@ -1,0 +1,148 @@
+body {
+    /* font */
+    --font: 'DM Mono';
+    --code-font: 'DM Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    /* sizes */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    /* animation/transition options */
+    --animations: off; /* keep OFF for midnight */
+    --list-item-transition: 0.15s ease;
+    --dms-icon-svg-transition: 0.3s ease;
+
+    /* top bar options */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: on; /* more minimal */
+
+    /* window controls */
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    /* dms button options */
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--text-4);
+    --dms-icon-color-after: var(--text-1);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: var(--bg-3); /* removed gradient */
+
+    /* background image options */
+    --background-image: on;
+    --background-image-url: url('https://madblox252.github.io/Portfolio/download.jfif');
+
+    /* transparency/blur options */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* other options */
+    --small-user-panel: on;
+
+    /* unrounding options */
+    --unrounding: on; /* IMPORTANT for midnight */
+
+    /* styling options */
+    --custom-spotify-bar: on;
+    --ascii-titles: off; /* cleaner */
+    --ascii-loader: off;
+
+    /* panel labels */
+    --panel-labels: off; /* optional but cleaner */
+    --label-color: var(--text-5);
+    --label-font-weight: 500;
+}
+
+/* color options */
+:root {
+    --colors: on;
+
+    /* text colors */
+    --text-0: var(--bg-4);
+    --text-1: oklch(95% 0 0);
+    --text-2: oklch(85% 0 0);
+    --text-3: oklch(75% 0 0);
+    --text-4: oklch(60% 0 0);
+    --text-5: oklch(40% 0 0);
+
+    /* background and dark colors */
+    --bg-1: oklch(31% 0 0);
+    --bg-2: oklch(27% 0 0);
+    --bg-3: oklch(23% 0 0);
+    --bg-4: oklch(19% 0 0);
+
+    /* states */
+    --hover: oklch(54% 0 0 / 0.08);
+    --active: oklch(54% 0 0 / 0.18);
+    --active-2: oklch(54% 0 0 / 0.28);
+    --message-hover: var(--hover);
+
+    /* accent colors (Midnight purple) */
+    --accent-1: oklch(75% 0.12 310);
+    --accent-2: oklch(70% 0.12 310);
+    --accent-3: oklch(65% 0.12 310);
+    --accent-4: oklch(60% 0.12 310);
+    --accent-5: oklch(55% 0.12 310);
+    --accent-new: oklch(70% 0.13 0);
+
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
+
+    /* status indicator colors */
+    --online: oklch(70% 0.12 170);
+    --dnd: oklch(70% 0.13 0);
+    --idle: oklch(75% 0.12 90);
+    --streaming: var(--accent-2);
+    --offline: var(--text-4);
+
+    /* border colors */
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--accent-2);
+    --button-border: hsl(0 0% 100% / 0.08);
+
+    /* base colors */
+    --red-1: oklch(75% 0.13 0);
+    --red-2: oklch(70% 0.13 0);
+    --red-3: oklch(65% 0.13 0);
+    --red-4: oklch(60% 0.13 0);
+    --red-5: oklch(55% 0.13 0);
+
+    --green-1: oklch(75% 0.12 170);
+    --green-2: oklch(70% 0.12 170);
+    --green-3: oklch(65% 0.12 170);
+    --green-4: oklch(60% 0.12 170);
+    --green-5: oklch(55% 0.12 160);
+
+    --blue-1: oklch(75% 0.11 215);
+    --blue-2: oklch(70% 0.11 215);
+    --blue-3: oklch(65% 0.11 215);
+    --blue-4: oklch(60% 0.11 215);
+    --blue-5: oklch(55% 0.11 215);
+
+    --yellow-1: oklch(80% 0.12 90);
+    --yellow-2: oklch(75% 0.12 90);
+    --yellow-3: oklch(70% 0.12 90);
+    --yellow-4: oklch(65% 0.12 90);
+    --yellow-5: oklch(60% 0.12 90);
+
+    --purple-1: oklch(75% 0.12 310);
+    --purple-2: oklch(70% 0.12 310);
+    --purple-3: oklch(65% 0.12 310);
+    --purple-4: oklch(60% 0.12 310);
+    --purple-5: oklch(55% 0.12 310);
+}
